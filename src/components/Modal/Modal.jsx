@@ -20,7 +20,7 @@ export class Modal extends Component {
       this.props.onCloseModal();
   };
     render() {
-      const { largeImageURL, tags } = this.props;
+      const { largeImageURL} = this.props;
     return (
       <div className="Overlay" onClick={this.handelOverlayClick}>
         <div className="Modal">
