@@ -17,15 +17,15 @@ export class Searchbar extends Component {
     return (
       <header className="Searchbar">
         <form className="SearchForm" onSubmit={this.hundleSubmit}>
-          <button type="submit" className="SearchForm-button">
-            <span className="SearchForm-button-label">Search</span>
+          <button type="submit" className="SearchFormbutton">
+            <span className="SearchFormbuttonlabel">Search</span>
           </button>
 
           <input
-            className="SearchForm-input"
+            className="SearchForminput"
             type="text"
-            autocomplete="off"
-            autofocus
+            autoComplete="off"
+            autoFocus
             placeholder="Search images and photos"
             onChange={this.handleChange}
           />

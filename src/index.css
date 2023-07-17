@@ -1,5 +1,5 @@
 /* bring in normalize.css styles */
-
+@import-normalize;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -86,7 +86,7 @@ img {
   overflow: hidden;
 }
 
-.SearchForm-button {
+.SearchFormbutton {
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -105,12 +105,12 @@ img {
   opacity: 1;
 }
 
-.SearchForm-button-label {
+.SearchFormbuttonlabel {
      color: #02f;
     font-weight: 700;
 }
 
-.SearchForm-input {
+.SearchForminput {
  display: inline-block;
     width: 100%;
     font: inherit;
