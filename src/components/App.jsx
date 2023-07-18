@@ -24,7 +24,7 @@ export default class App extends Component {
     selectedImage: '',
     isLoading: false,
     error: null,
-    total: 0,
+    
   };
   handleSearch = search => {
      if (search.trim() === '') {
