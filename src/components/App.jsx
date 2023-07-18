@@ -23,7 +23,8 @@ export default class App extends Component {
     showModal: false,
     selectedImage: '',
     isLoading: false,
-    error : null,
+    error: null,
+    total: 0,
   };
   handleSearch = search => {
      if (search.trim() === '') {
@@ -86,13 +87,14 @@ export default class App extends Component {
   };
 
 
-render() {
+  render() {
+   const totalPage = Math.ceil(this.state.total / 12);
   return (
     <div>
       <Searchbar onSearch={this.handleSearch} />
       {this.state.isLoading && <Loader />}
       <ImageGallery images={this.state.images} />
-      {this.state.images.length > 0 && (
+      {this.state.images.length > 0 && totalPage > this.state.page && (
         <Button onLoadMore={this.handleLoadMore} />
       )}
       <ToastContainer

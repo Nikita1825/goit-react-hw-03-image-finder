@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import PropTypes from 'prop-types';
 
 export class Modal extends Component {
   componentDidMount() {
@@ -16,8 +16,9 @@ export class Modal extends Component {
     }
   };
   handelOverlayClick = event => {
-    
+    if (event.target === event.currentTarget) {
       this.props.onCloseModal();
+    }
   };
     render() {
       const { largeImageURL} = this.props;
@@ -30,4 +31,8 @@ export class Modal extends Component {
     );
   }
 }
+Modal.propTypes = {
+  onCloseModal: PropTypes.func.isRequired,
+  
+};
 export default Modal;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export const Button = ({ onLoadMore }) => {
   return (
     <div className="Load-more-wrap">
@@ -6,4 +7,8 @@ export const Button = ({ onLoadMore }) => {
       </button>
     </div>
   );
+};
+
+Button.propTypes = {
+  onLoadMore: PropTypes.func.isRequired,
 };
